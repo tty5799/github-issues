@@ -1,0 +1,5 @@
+class labelPage {
+  constructor() {
+
+  }
+}

@@ -17,9 +17,8 @@ export function getIssueTpl() {
       </nav>
 
       <div class="new-issue p-3 py-1 base-outer flex items-center justify-center w-2/12 ml-4 bg-green-700 text-white">
-        <a href="#">New
+        <a href="#new-issue">New
           issue</a></div>
-
     </div>
     <div id="issues-wrapper" class="m-auto  base-outer mt-6 bg-slate-100">
       <div class="issue-header h-16 flex justify-between items-center border-b">
