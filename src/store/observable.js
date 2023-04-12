@@ -4,6 +4,7 @@ export class Observable{
   }
 
   addObserver(observer) {
+    console.log(observer)
     this.observers.push(observer);
   }
 
@@ -12,6 +13,7 @@ export class Observable{
   }
 
   notifyObservers(data) {
+    console.log(data,"data")
     this.observers.forEach((observer) => observer(data));
   }
 }

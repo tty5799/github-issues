@@ -1,13 +1,13 @@
 import { issue } from "./pages/issue"
 import { LabelStore } from "./store/labelStore.js";
-import {label} from  "./pages/label"
+import {LabelList} from  "./pages/label"
 
 
 
 const appDiv = document.getElementById('app');
 
 const labelStore = new LabelStore()
-const labelPage = new label()
+const labelPage = new LabelList()
 
 labelStore.addObserver(labelPage.update);
 

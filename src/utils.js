@@ -15,3 +15,5 @@ export const renderTemplate = (selector) => {
     document.querySelector(selector).innerHTML = template;
   };
 };
+
+export const $ = (selectorName) => document.querySelector(selectorName);
