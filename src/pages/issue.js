@@ -27,5 +27,5 @@ export const issue = () => {
     };
   };
 
-  pipe(getIssueTpl, renderIssueTemplate, fetchIssues, renderChild(issueStatus))();
+  return  pipe(getIssueTpl, renderIssueTemplate, fetchIssues, renderChild(issueStatus))();
 }

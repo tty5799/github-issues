@@ -1,17 +1,28 @@
 import { issue } from "./pages/issue"
+import { LabelStore } from "./store/labelStore.js";
+import {label} from  "./pages/label"
+
+
 
 const appDiv = document.getElementById('app');
 
+const labelStore = new LabelStore()
+const labelPage = new label()
+
+labelStore.addObserver(labelPage.update);
+
 function router(route) {
-  // route 매개변수를 사용하여 각 경로에 맞는 컴포넌트를 렌더링합니다.
+  // route 매개변수를 사용하여 각 경로에 맞는 컴포넌트를 렌더링한다
   switch (route) {
     case '':
       appDiv.innerHTML = issue();
       break;
     case 'label':
-      appDiv.innerHTML = "hi";
+      labelStore.fetchLabels('/data-sources/labels.json')
       break;
     case "new-issue" :
+      break
+    case "new-label" :
       break
     default:
       appDiv.innerHTML = '<h1>404 페이지를 찾을 수 없습니다.</h1>';
