@@ -13,28 +13,5 @@ export class LabelList {
     const labelHtml = getLabelTpl();
     appDiv.innerHTML = labelHtml;
     $(".label-list").innerHTML = dataList;
-    new NewLabel('.new-label-button').event()
-  }
-}
-
-export class NewLabel {
-  $labelForm = $('#new-label-form');
-  constructor(element) {
-    this.element = element;
-    this.labelStore = new LabelStore();
-    this.event = this.event.bind(this);
-    this.labelStore.addObserver(this.toggle(this.event));
-  }
-
-  event() {
-    $(this.element).addEventListener('click', () => {
-      console.log("??");
-      this.labelStore.isTest();
-    });
-  }
-  toggle(isOpened) {
-    isOpened
-      ? this.$labelForm.classList.add('hidden')
-      : this.$labelForm.classList.remove('hidden');
   }
 }
